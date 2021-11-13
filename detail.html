@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPKU</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+    />
+    
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <section class="content-left mb-2">
+        <div class="recommend-box">추천 항목<br>
+            <button type="button" class="btn btn-outline-primary btn-lg">1시간 요가하기</button>
+            <button type="button" class="btn btn-outline-primary btn-lg">스트레칭 하기</button>
+            <button type="button" class="btn btn-outline-primary btn-lg">스쿼트 100개하기</button><br>
+            <button type="button" class="btn btn-outline-primary btn-lg">1만보 걷기</button>
+            <button type="button" class="btn btn-outline-primary btn-lg">하체 운동하기</button>
+        </div>
+        <form>
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">직접 입력하기</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+            </div>
+        </form>
+        
+    </section>
+    <section class="content-right mb-2"></section>
+        <div class="span-choice">
+            <button type="button" class="btn btn-primary span-btn seven">7일</button>
+            <button type="button" class="btn btn-primary span-btn">30일</button>
+            <button type="button" class="btn btn-primary span-btn">100일</button>
+        </div>
+        <div class="calendar">
+            <div class="span-header">
+                <span><strong>기간 선택</strong></span>
+            </div>
+            <div class="header">
+                <div class="year-month"></div>
+                <div class="nav">
+                    <button class="nav-btn go-prev">&lt;</button>
+                    <button class="nav-btn go-today">Today</button>
+                    <button class="nav-btn go-next">&gt;</button>
+                </div>
+            </div>
+            <div class="main">
+                <div class="days">
+                    <div class="day">Sun</div>
+                    <div class="day">Mon</div>
+                    <div class="day">Tue</div>
+                    <div class="day">Wed</div>
+                    <div class="day">Thu</div>
+                    <div class="day">Fri</div>
+                    <div class="day">Sat</div>
+                </div>
+                <div class="dates"></div>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        const date = new Date();
+        const viewYear = date.getFullYear();
+        const viewMonth = date.getMonth();
+        const prevDay = new Date(viewYear, viewMonth,0);
+        const thisDay = new Date(viewYear, viewMonth + 1, 0);
+        const Pdate = prevDay.getDate();
+        const Pday = prevDay.getDay();
+        const Tdate = thisDay.getDate();
+        const Tday = thisDay.getDay(); 
+        const prevDates = [];
+        const thisDates = [...Array(Tdate + 1).keys()].slice(1);
+        const nextDates= [];
+        
+        document.querySelector('.year-month').textContent = `${viewYear}년 ${viewMonth + 1}월`;
+
+        if (Pday !== 6) {
+            for (let i = 0; i < Pday + 1; i++){
+                prevDates.unshift(Pdate-i);
+            }
+        }
+
+        for (let i = 1; i < 7 - Tday; i++){
+            nextDates.push(i);
+        }
+        const dates = prevDates.concat(thisDates, nextDates);
+
+        dates.forEach((date, i) => {
+            dates[i] = `<div class="date">${date}</div>`;
+        })
+
+        document.querySelector('.dates').innerHTML = dates.join('');
+        </script>
+</body>
+</html>
+
+
