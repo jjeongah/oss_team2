@@ -1,0 +1,48 @@
+body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+div {
+  border: 1px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-items: stretch;
+  width: 750px;
+}
+
+.feels {
+  display: flex;
+  font-size: 30px;
+}
+
+.feel {
+  flex-basis: 0;
+  flex-grow: 1;
+}
+
+.emoName {
+  font-size: 10px;
+  word-break: break-all;
+}
+
+.afterDay {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-items: stretch;
+}
+
+#submit {
+  width: fit-content;
+  margin: auto;
+}
