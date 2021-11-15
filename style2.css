@@ -1,21 +1,92 @@
+
+
 body {
+    display: flex;
+    flex-direction: column;
+}
+
+
+header {
+    border-bottom: 2px solid rgb(18, 197, 143);
+    width: 100%;
+    padding: 20px;
+    height: 10%;
+    box-sizing: border-box;
+
+}
+
+.category-name {
+    margin-top: 30px;
+    font-size: 55px;
+    font-weight: bold;
+}
+
+/*add page*/
+
+
+
+.addpage-btn {
+    width: 80px;
+    height: 80px;
+}
+.addpage-icon {
+    width: 80px;
+    height: 80px;
+}
+
+.row {
+    align-items: center;
+    width: 1200px;
+    height: 400px;
+}
+.col {
+
+    align-items: center;
+    width: 400px;
+    height: 400px;
+}
+
+.category-btn {
+    margin-right: 50%;
+    margin-left: 50%;
+    margin-top:30%;
+    width: 300px;
+    height: 300px;
+    border-radius: 50px;
+}
+
+.btn-name {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+
+
+
+/*detail page*/
+
+.detail-page {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     min-height: 100vh;
 }
 
-body > section:first-child {
+.detail-page > section:first-child {
+
+    width: 100%;
+    flex: 5;
+    border-right: 2px solid rgb(18, 197, 143);
+}
+
+.detail-page > section:last-child {
     width: 100%;
     flex: 5;
 }
 
-body > section:last-child {
-    width: 100%;
-    flex: 5;
-}
 
+/* left section */
 
 .content-left {
     display:grid;
@@ -25,6 +96,7 @@ body > section:last-child {
 }
 
 .recommend-box {
+    margin-top: 50px;
     margin-left: 10%;
     background: lavender;
     width: 100%;
@@ -49,6 +121,20 @@ body > section:last-child {
 }
 
 
+/* right section */
+
+.content-right {
+    display: grid;
+    grid-template-columns: 200px 1000px;
+    grid-template-rows: 800px 100px;
+    gap: 0px;
+}
+
+.content-right > div:first-child {
+    margin-top: 300px;
+}
+
+
 
 .span-choice{
     display: flex;
@@ -56,12 +142,18 @@ body > section:last-child {
     align-items: center;
 }
 .span-btn {
-    width: 200px;
+    /* margin-left:50px; */
+    width: 120px;
     height: 50px;
-    margin: 30px;
+    margin:50px;
     font-size:30px;
 }
 
+.add-btn {
+    margin-left: 70%;
+    width:200px;
+    height: 80px;
+}
 
 .btn {
     margin-top: 40px;
@@ -74,16 +166,16 @@ body > section:last-child {
     display: flex;
     flex-direction: column;
     width: 1000px;
-    margin: 50px;
 }
 
 .span-header {
+    margin-top: 50px;
     margin-left: 35%;
     margin-bottom: 50px;
     font-size: 50px;
 }
 
-.header {
+.calendar-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
