@@ -17,55 +17,65 @@
     <link rel="stylesheet" href="style2.css">
 </head>
 <body>
-    <section class="content-left mb-2">
-        <div class="recommend-box">추천 항목<br>
-            <button type="button" class="btn btn-outline-primary btn-lg">1시간 요가하기</button>
-            <button type="button" class="btn btn-outline-primary btn-lg">스트레칭 하기</button>
-            <button type="button" class="btn btn-outline-primary btn-lg">스쿼트 100개하기</button><br>
-            <button type="button" class="btn btn-outline-primary btn-lg">1만보 걷기</button>
-            <button type="button" class="btn btn-outline-primary btn-lg">하체 운동하기</button>
+    <header>
+        <div class="d-flex justify-content-between">
+            <button type="button" class="btn btn-primary addpage-btn">&lt;</button>
+            <span class="category-name">운동/다이어트</span>
+            <span></span>
         </div>
-        <form>
-            <div class="form-group">
-                <label for="exampleFormControlTextarea1">직접 입력하기</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+    </header>
+    <div class="detail-page">
+        <section class="content-left mb-2">
+            <div class="recommend-box">추천 항목<br>
+                <button type="button" class="btn btn-outline-primary btn-lg recommend-btn">1시간 요가하기</button>
+                <button type="button" class="btn btn-outline-primary btn-lg recommend-btn">스트레칭 하기</button>
+                <button type="button" class="btn btn-outline-primary btn-lg recommend-btn">스쿼트 100개하기</button><br>
+                <button type="button" class="btn btn-outline-primary btn-lg recommend-btn">1만보 걷기</button>
+                <button type="button" class="btn btn-outline-primary btn-lg recommend-btn">하체 운동하기</button>
             </div>
-        </form>
-        
-    </section>
-    <section class="content-right mb-2"></section>
-        <div class="span-choice">
-            <button type="button" class="btn btn-primary span-btn seven">7일</button>
-            <button type="button" class="btn btn-primary span-btn">30일</button>
-            <button type="button" class="btn btn-primary span-btn">100일</button>
-        </div>
-        <div class="calendar">
-            <div class="span-header">
-                <span><strong>기간 선택</strong></span>
+            <form>
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">직접 입력하기</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+                </div>
+            </form>
+            
+        </section>
+        <section class="content-right mb-2">
+            <div class="span-choice">
+                <button type="button" class="btn btn-primary span-btn seven">7일</button>
+                <button type="button" class="btn btn-primary span-btn">30일</button>
+                <button type="button" class="btn btn-primary span-btn">100일</button>
             </div>
-            <div class="header">
-                <div class="year-month"></div>
-                <div class="nav">
-                    <button class="nav-btn go-prev">&lt;</button>
-                    <button class="nav-btn go-today">Today</button>
-                    <button class="nav-btn go-next">&gt;</button>
+            <div class="calendar">
+                <div class="span-header">
+                    <span><strong>기간 선택</strong></span>
+                </div>
+                <div class="calendar-header">
+                    <div class="year-month"></div>
+                    <div class="nav">
+                        <button class="nav-btn go-prev">&lt;</button>
+                        <button class="nav-btn go-today">Today</button>
+                        <button class="nav-btn go-next">&gt;</button>
+                    </div>
+                </div>
+                <div class="main">
+                    <div class="days">
+                        <div class="day">Sun</div>
+                        <div class="day">Mon</div>
+                        <div class="day">Tue</div>
+                        <div class="day">Wed</div>
+                        <div class="day">Thu</div>
+                        <div class="day">Fri</div>
+                        <div class="day">Sat</div>
+                    </div>
+                    <div class="dates"></div>
                 </div>
             </div>
-            <div class="main">
-                <div class="days">
-                    <div class="day">Sun</div>
-                    <div class="day">Mon</div>
-                    <div class="day">Tue</div>
-                    <div class="day">Wed</div>
-                    <div class="day">Thu</div>
-                    <div class="day">Fri</div>
-                    <div class="day">Sat</div>
-                </div>
-                <div class="dates"></div>
-            </div>
-        </div>
-    </section>
-    
+            <span> </span>
+            <button type="button" class="btn btn-success add-btn">추가하기</button>
+        </section>
+    </div>
     <script>
         const date = new Date();
         const viewYear = date.getFullYear();
