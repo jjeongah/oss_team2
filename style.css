@@ -100,19 +100,9 @@ button{
   height: 60px;
   width: 300px;
 }
-.habit{
-  display: flex;
-  flex-direction: row;
-  margin: 30px;
+.habitlist{
+  margin-left: 20%;
 }
-img{
-  height: 80px;
+.habits{
+  margin-left: 5%;
 }
-.hlist{
-  display: flex;
-  flex-direction: row;
-}
-ul{
-   list-style:none;
-}
- 
