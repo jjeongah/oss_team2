@@ -31,3 +31,24 @@ dates.forEach((date, i) => {
 
 document.querySelector('.dates').innerHTML = dates.join('');
 /*for calendar in main.html end */
+
+/*move pages*/
+function movetoaddpage(){
+  location.href = "add.html";
+}
+
+function movetomanagepage(){
+  location.href = "manage.html";
+}
+
+function movetomainpage(){
+  location.href = "main.html";
+}
+
+function movetotodaypage(){
+  location.href = "today.html";
+}
+
+function movetorewardpage(){
+  location.href = "reward.html";
+}
