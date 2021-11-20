@@ -75,6 +75,36 @@ dates.forEach((date, i) => {
 
 document.querySelector('.dates').innerHTML = dates.join('');
 
+/*store to localStorage*/
+let arr = {};
+let stored_arr = {};
+let num = 0; // number of habits
+$('#addbtn').click(function(){
+    console.log($("#exampleFormControlTextarea1").val());
+    /*bring previous values*/
+    num = localStorage.getItem("num");
+    num++;
+    localStorage.setItem("num", num);
+    //console.log(localStorage.getItem("num"));
+    arr = JSON.parse(localStorage.getItem("arr"));
+    if(arr==null){
+      arr = {};
+    }
+    console.log(arr);
+    //console.log(JSON.parse(localStorage.getItem("arr")));
+    console.log(JSON.parse(localStorage.getItem("num")));
+    arr[num] = $("#exampleFormControlTextarea1").val();
+    console.log(arr[num]);
+    localStorage.setItem("arr", JSON.stringify(arr));
+
+    //localStorage.setItem("arr2", JSON.stringify(arr));
+    //console.log(JSON.parse(localStorage.getItem("arr")));
+    //localStorage.setItem("arr2", JSON.stringify(arr));
+    //stored_arr= JSON.parse(localStorage.getItem("arr2"));
+		//console.log(stored_arr);
+});
+/*store to localStorage end*/
+
 /*move pages*/
 function movetomainpage(){
   location.href = "main.html";
