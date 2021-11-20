@@ -1,3 +1,4 @@
+
 /*for calendar in main.html */
 const date = new Date();
 const viewYear = date.getFullYear();
@@ -52,3 +53,17 @@ function movetotodaypage(){
 function movetorewardpage(){
   location.href = "reward.html";
 }
+
+let stored_arr = {};
+let num_called;
+window.addEventListener("load", () => {
+  stored_arr= JSON.parse(localStorage.getItem("arr"));
+  num_called = localStorage.getItem("num");
+  console.log(num_called);
+  if(num_called>0){
+    for(k=1; k<=num_called; k++){
+      $(".habits").append("<li>"+ stored_arr[k]+ "</li>");
+    }
+    //document.getElementById('li1').innerHTML = stored_arr[num_called];
+  }
+});
