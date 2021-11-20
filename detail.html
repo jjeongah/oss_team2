@@ -13,13 +13,13 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
     />
-    
+
     <link rel="stylesheet" href="style2.css">
 </head>
 <body>
     <header>
         <div class="d-flex justify-content-between">
-            <button type="button" class="btn btn-primary addpage-btn"><img src="./img/backarrow.png" height="50" width="50"/></button>
+            <button type="button" class="btn btn-primary addpage-btn" onclick="movetoaddpage()"><img src="./img/backarrow.png" height="50" width="50"/></button>
             <span class="category-name">운동/다이어트</span>
             <span></span>
         </div>
@@ -39,7 +39,7 @@
                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
                 </div>
             </form>
-            
+
         </section>
         <section class="content-right mb-2">
             <div class="span-choice">
@@ -76,40 +76,6 @@
             <button type="button" class="btn btn-success add-btn">추가하기</button>
         </section>
     </div>
-    <script>
-        const date = new Date();
-        const viewYear = date.getFullYear();
-        const viewMonth = date.getMonth();
-        const prevDay = new Date(viewYear, viewMonth,0);
-        const thisDay = new Date(viewYear, viewMonth + 1, 0);
-        const Pdate = prevDay.getDate();
-        const Pday = prevDay.getDay();
-        const Tdate = thisDay.getDate();
-        const Tday = thisDay.getDay(); 
-        const prevDates = [];
-        const thisDates = [...Array(Tdate + 1).keys()].slice(1);
-        const nextDates= [];
-        
-        document.querySelector('.year-month').textContent = `${viewYear}년 ${viewMonth + 1}월`;
-
-        if (Pday !== 6) {
-            for (let i = 0; i < Pday + 1; i++){
-                prevDates.unshift(Pdate-i);
-            }
-        }
-
-        for (let i = 1; i < 7 - Tday; i++){
-            nextDates.push(i);
-        }
-        const dates = prevDates.concat(thisDates, nextDates);
-
-        dates.forEach((date, i) => {
-            dates[i] = `<div class="date">${date}</div>`;
-        })
-
-        document.querySelector('.dates').innerHTML = dates.join('');
-        </script>
+      <script src="index3.js" type="text/javascript"></script>
 </body>
 </html>
-
-
