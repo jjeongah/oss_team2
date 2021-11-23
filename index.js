@@ -1,36 +1,75 @@
 
 /*for calendar in main.html */
-const date = new Date();
-const viewYear = date.getFullYear();
-const viewMonth = date.getMonth();
-const prevDay = new Date(viewYear, viewMonth,0);
-const thisDay = new Date(viewYear, viewMonth + 1, 0);
-const Pdate = prevDay.getDate();
-const Pday = prevDay.getDay();
-const Tdate = thisDay.getDate();
-const Tday = thisDay.getDay();
-const prevDates = [];
-const thisDates = [...Array(Tdate + 1).keys()].slice(1);
-const nextDates= [];
+let date = new Date();
+const renderCalendar = () => {
+  const viewYear = date.getFullYear();
+  const viewMonth = date.getMonth();
+  const prevDay = new Date(viewYear, viewMonth,0);
+  const thisDay = new Date(viewYear, viewMonth + 1, 0);
+  const Pdate = prevDay.getDate();
+  const Pday = prevDay.getDay();
+  const Tdate = thisDay.getDate();
+  const Tday = thisDay.getDay();
+  const prevDates = [];
+  const thisDates = [...Array(Tdate + 1).keys()].slice(1);
+  const nextDates= [];
 
-document.querySelector('.year-month').textContent = `${viewYear}년 ${viewMonth + 1}월`;
+  document.querySelector('.year-month').textContent = `${viewYear}년 ${viewMonth + 1}월`;
 
-if (Pday !== 6) {
-    for (let i = 0; i < Pday + 1; i++){
-        prevDates.unshift(Pdate-i);
+  if (Pday !== 6) {
+      for (let i = 0; i < Pday + 1; i++){
+          prevDates.unshift(Pdate-i);
+      }
+  }
+
+  for (let i = 1; i < 7 - Tday; i++){
+      nextDates.push(i);
+  }
+  const dates = prevDates.concat(thisDates, nextDates);
+  const firstDateIndex = dates.indexOf(1);
+  const lastDateIndex = dates.lastIndexOf(Tdate);
+  dates.forEach((date, i) => {
+    const condition = i >= firstDateIndex && i < lastDateIndex + 1
+                      ? 'this'
+                      : 'other';
+
+    dates[i] = `<div class="date"><span class="${condition}">${date}</span></div>`;
+  })
+  document.querySelector('.dates').innerHTML = dates.join('');
+  const today = new Date();
+  if (viewMonth === today.getMonth() && viewYear === today.getFullYear()) {
+    for (let date of document.querySelectorAll('.this')) {
+      if (+date.innerText === today.getDate()) {
+        date.classList.add('today');
+        break;
+      }
     }
+  }
+
+
+  
+
+
 }
 
-for (let i = 1; i < 7 - Tday; i++){
-    nextDates.push(i);
+renderCalendar();
+
+const prevMonth = () => {
+  date.setDate(1);
+  date.setMonth(date.getMonth() - 1);
+  renderCalendar();
 }
-const dates = prevDates.concat(thisDates, nextDates);
 
-dates.forEach((date, i) => {
-    dates[i] = `<div class="date">${date}</div>`;
-})
+const nextMonth = () => {
+  date.setDate(1);
+  date.setMonth(date.getMonth() + 1);
+  renderCalendar();
+}
 
-document.querySelector('.dates').innerHTML = dates.join('');
+const goToday = () => {
+  date = new Date();
+  renderCalendar();
+}
 /*for calendar in main.html end */
 
 /*move pages*/
