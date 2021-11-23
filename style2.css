@@ -90,17 +90,17 @@ header {
 
 .content-left {
     display:grid;
-    grid-template-columns: 1000px;
-    grid-template-rows: 300px 100px;
-    gap: 200px;
+    grid-template-columns: 80%;
+    grid-template-rows: 30% 10%;
+    gap: 20%;
 }
 
 .recommend-box {
-    margin-top: 50px;
+    margin-top: 10%;
     margin-left: 10%;
     background: lavender;
     width: 100%;
-    height: 100%;
+    height: 80%;
     font-size: 40px;
     font-weight: bold;
     border: 1px solid lavenderblush;
@@ -114,8 +114,8 @@ header {
 }
 
 .form-control {
-    margin-top: 20px;
-    width: 1000px;
+    margin-top: 5%;
+    width:110%;
     font-size: 30px;
     border: 1px solid #333333;
 }
@@ -125,13 +125,13 @@ header {
 
 .content-right {
     display: grid;
-    grid-template-columns: 200px 1000px;
-    grid-template-rows: 800px 100px;
+    grid-template-columns: 15% 60%;
+    grid-template-rows: 65% 20%;
     gap: 0px;
 }
 
 .content-right > div:first-child {
-    margin-top: 300px;
+    margin-top: 150%;
 }
 
 
@@ -143,16 +143,16 @@ header {
 }
 .span-btn {
     /* margin-left:50px; */
-    width: 120px;
-    height: 50px;
-    margin:50px;
-    font-size:30px;
+    width: 60%;
+    height: 10%;
+    margin:20%;
+
 }
 
 .add-btn {
-    margin-left: 70%;
-    width:200px;
-    height: 80px;
+    margin-left: 100%;
+    width:30%;
+    height: 20%;
 }
 
 .btn {
