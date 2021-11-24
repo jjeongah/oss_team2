@@ -8,7 +8,7 @@ function close() {
   document.querySelector(".background").className = "background";
 }
 
-document.querySelector("#addbtn").addEventListener('click', show);
+//document.querySelector("#addbtn").addEventListener('click', show);
 document.querySelector("#close").addEventListener('click', close);
 
 
@@ -122,22 +122,27 @@ let num = 0; // number of habits
 
 $('#addbtn').click(function(){
     console.log($("#exampleFormControlTextarea1").val());
-    /*bring previous values*/
-
-    num = localStorage.getItem("num");
-    num++;
-    localStorage.setItem("num", num);
-    //console.log(localStorage.getItem("num"));
-    arr = JSON.parse(localStorage.getItem("arr"));
-    if(arr==null){
-      arr = {};
+    if($("#exampleFormControlTextarea1").val()==""){
+      alert("습관을 입력하세요!");
     }
-    console.log(arr);
-    //console.log(JSON.parse(localStorage.getItem("arr")));
-    console.log(JSON.parse(localStorage.getItem("num")));
-    arr[num] = $("#exampleFormControlTextarea1").val();
-    console.log(arr[num]);
-    localStorage.setItem("arr", JSON.stringify(arr));
+    else{
+      /*bring previous values*/
+      num = localStorage.getItem("num");
+      num++;
+      localStorage.setItem("num", num);
+      //console.log(localStorage.getItem("num"));
+      arr = JSON.parse(localStorage.getItem("arr"));
+      if(arr==null){
+        arr = {};
+      }
+      console.log(arr);
+      //console.log(JSON.parse(localStorage.getItem("arr")));
+      console.log(JSON.parse(localStorage.getItem("num")));
+      arr[num] = $("#exampleFormControlTextarea1").val();
+      console.log(arr[num]);
+      localStorage.setItem("arr", JSON.stringify(arr));
+      show();
+    }
 
     //localStorage.setItem("arr2", JSON.stringify(arr));
     //console.log(JSON.parse(localStorage.getItem("arr")));
@@ -183,4 +188,67 @@ function movetodetailpage_foryou(){
 function movetoaddpage(){
 //  localStorage.setItem("val", 0);
   location.href = "add.html";
+}
+
+let term = 0;
+let num_2= 0;
+let p_arr = {};
+let p_stored_arr = {};
+
+/*choosing term*/
+function sev_days(){
+  console.log("7 days");
+  term = 7;
+  /*bring previous values*/
+  num_2 = localStorage.getItem("num2");
+  num_2++;
+  localStorage.setItem("num2", num_2);
+
+  p_arr = JSON.parse(localStorage.getItem("p_arr"));
+  if(p_arr==null){
+    p_arr = {};
+  }
+  console.log(p_arr);
+  console.log(JSON.parse(localStorage.getItem("num2")));
+  p_arr[num_2] = term;
+  console.log(p_arr[num_2]);
+  localStorage.setItem("p_arr", JSON.stringify(p_arr));
+}
+function thr_days(){
+  console.log("30 days");
+  term = 30;
+  console.log("7 days");
+  /*bring previous values*/
+  num_2 = localStorage.getItem("num2");
+  num_2++;
+  localStorage.setItem("num2", num_2);
+
+  p_arr = JSON.parse(localStorage.getItem("p_arr"));
+  if(p_arr==null){
+    p_arr = {};
+  }
+  console.log(p_arr);
+  console.log(JSON.parse(localStorage.getItem("num2")));
+  p_arr[num_2] = term;
+  console.log(p_arr[num_2]);
+  localStorage.setItem("p_arr", JSON.stringify(p_arr));
+}
+function hun_days(){
+  console.log("100 days");
+  term = 100;
+  console.log("7 days");
+  /*bring previous values*/
+  num_2 = localStorage.getItem("num2");
+  num_2++;
+  localStorage.setItem("num2", num_2);
+
+  p_arr = JSON.parse(localStorage.getItem("p_arr"));
+  if(p_arr==null){
+    p_arr = {};
+  }
+  console.log(p_arr);
+  console.log(JSON.parse(localStorage.getItem("num2")));
+  p_arr[num_2] = term;
+  console.log(p_arr[num_2]);
+  localStorage.setItem("p_arr", JSON.stringify(p_arr));
 }
