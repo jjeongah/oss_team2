@@ -149,7 +149,7 @@ $('#addbtn').click(function(){
 
 /*move pages*/
 function movetomainpage(){
-  location.href = "main.html";
+  location.href = "index.html";
 }
 
 function movetodetailpage_health(){

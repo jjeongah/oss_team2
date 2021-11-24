@@ -47,7 +47,7 @@ const renderCalendar = () => {
   }
 
 
-  
+
 
 
 }
@@ -82,7 +82,7 @@ function movetomanagepage(){
 }
 
 function movetomainpage(){
-  location.href = "main.html";
+  location.href = "index.html";
 }
 
 function movetotodaypage(){
