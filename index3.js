@@ -1,4 +1,16 @@
 let val = 0;
+/*functions for popup start*/
+function show() {
+  document.querySelector(".background").className = "background show";
+}
+
+function close() {
+  document.querySelector(".background").className = "background";
+}
+
+document.querySelector("#addbtn").addEventListener('click', show);
+document.querySelector("#close").addEventListener('click', close);
+
 
 window.addEventListener("load", () => {
   console.log("index3 js");
@@ -107,9 +119,11 @@ const goToday = () => {
 let arr = {};
 let stored_arr = {};
 let num = 0; // number of habits
+
 $('#addbtn').click(function(){
     console.log($("#exampleFormControlTextarea1").val());
     /*bring previous values*/
+
     num = localStorage.getItem("num");
     num++;
     localStorage.setItem("num", num);
