@@ -1,3 +1,4 @@
+
 body {
     display: flex;
     flex-direction: row;
@@ -14,7 +15,7 @@ body {
     position: relative;
     color: black;
   }
-  
+
 .today::before {
 position: absolute;
 top: 50%;
