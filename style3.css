@@ -68,7 +68,35 @@ img {
   grid-template-rows: auto;
 }
 
-#submit {
+.contentBar {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  align-items: center;
+}
+
+.sticker {
+  border: 1px solid #444444;
+  width: 100%;
+}
+
+table {
+  width: 100%;
+}
+
+th,
+td {
+  border: 1px solid #444444;
+  padding: 2px;
+  width: calc(100% / 7);
+}
+
+#submitT {
+  width: fit-content;
+  margin: auto;
+}
+
+#submitR {
   width: fit-content;
   margin: auto;
 }
