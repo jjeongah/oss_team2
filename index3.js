@@ -194,6 +194,7 @@ let term = 0;
 let num_2= 0;
 let p_arr = {};
 let p_stored_arr = {};
+let s_arr={};
 
 /*choosing term*/
 function sev_days(){
@@ -208,8 +209,17 @@ function sev_days(){
   if(p_arr==null){
     p_arr = {};
   }
-  console.log(p_arr);
-  console.log(JSON.parse(localStorage.getItem("num2")));
+
+  s_arr = JSON.parse(localStorage.getItem("s_arr"));
+  if(s_arr==null){
+    s_arr = {};
+  }
+  today = new Date();
+  s_arr[num_2] = today;
+  console.log(s_arr[num_2]);
+  localStorage.setItem("s_arr", JSON.stringify(s_arr));
+  //console.log(p_arr);
+  //console.log(JSON.parse(localStorage.getItem("num2")));
   p_arr[num_2] = term;
   console.log(p_arr[num_2]);
   localStorage.setItem("p_arr", JSON.stringify(p_arr));
@@ -227,6 +237,16 @@ function thr_days(){
   if(p_arr==null){
     p_arr = {};
   }
+  /*store start date*/
+  s_arr = JSON.parse(localStorage.getItem("s_arr"));
+  if(s_arr==null){
+    s_arr = {};
+  }
+  today = new Date();
+  s_arr[num_2] = today;
+  console.log(s_arr[num_2]);
+  localStorage.setItem("s_arr", JSON.stringify(s_arr));
+
   console.log(p_arr);
   console.log(JSON.parse(localStorage.getItem("num2")));
   p_arr[num_2] = term;
@@ -246,6 +266,16 @@ function hun_days(){
   if(p_arr==null){
     p_arr = {};
   }
+  /*store start date*/
+  s_arr = JSON.parse(localStorage.getItem("s_arr"));
+  if(s_arr==null){
+    s_arr = {};
+  }
+  today = new Date();
+  s_arr[num_2] = today;
+  console.log(s_arr[num_2]);
+  localStorage.setItem("s_arr", JSON.stringify(s_arr));
+
   console.log(p_arr);
   console.log(JSON.parse(localStorage.getItem("num2")));
   p_arr[num_2] = term;
