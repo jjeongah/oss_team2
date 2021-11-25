@@ -37,15 +37,36 @@ const renderCalendar = () => {
   })
   document.querySelector('.dates').innerHTML = dates.join('');
   const today = new Date();
-  if (viewMonth === today.getMonth() && viewYear === today.getFullYear()) {
-    for (let date of document.querySelectorAll('.this')) {
-      if (+date.innerText === today.getDate()) {
-        date.classList.add('today');
-        break;
+  // if (viewMonth === today.getMonth() && viewYear === today.getFullYear()) {
+  //   for (let date of document.querySelectorAll('.this')) {
+  //     if (+date.innerText === today.getDate()) {
+  //       date.classList.add('today');
+  //       break;
+  //     }
+  //   }
+  // }
+  let stored_date = {};
+  let span_choice = {};
+  let num_called;
+  stored_date = JSON.parse(localStorage.getItem("start_date"));
+  span_choice = JSON.parse(localStorage.getItem("p_arr"));
+  num_called = localStorage.getItem("num");
+  
+  for (let k=1; k<=num_called; k++){
+    let current_month = stored_date[k].month;
+    let current_year = stored_date[k].year;
+    let current_date = stored_date[k].date;
+    if (viewMonth === current_month && viewYear === current_year){
+      for (let date of document.querySelectorAll('.this')) {
+        
+        if (+date.innerText >=current_date && +date.innerText <current_date+span_choice[k]){
+          for (let j=0;j<span_choice[k];j++)
+          date.classList.add('add_habbit');
+        }
       }
     }
+  
   }
-
 
 
 

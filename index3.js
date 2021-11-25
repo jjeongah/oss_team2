@@ -133,7 +133,7 @@ const goToday = () => {
 let arr = {};
 let stored_arr = {};
 let num = 0; // number of habits
-
+let start_date = {};
 $('#addbtn').click(function(){
     console.log($("#exampleFormControlTextarea1").val());
     if($("#exampleFormControlTextarea1").val()==""){
@@ -144,6 +144,20 @@ $('#addbtn').click(function(){
       num = localStorage.getItem("num");
       num++;
       localStorage.setItem("num", num);
+      const today = new Date();
+      
+      let start_day = {
+        year: today.getFullYear(),
+        month: today.getMonth(),
+        date: today.getDate()
+      };
+      start_date = JSON.parse(localStorage.getItem("start_date"));
+      if (start_date==null){
+        start_date = {};
+      }
+      start_date[num] = start_day;
+      
+      localStorage.setItem("start_date", JSON.stringify(start_date));
       //console.log(localStorage.getItem("num"));
       arr = JSON.parse(localStorage.getItem("arr"));
       if(arr==null){
