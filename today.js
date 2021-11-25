@@ -121,7 +121,8 @@ todaySubmit.addEventListener("click", () => {
   let input = document.querySelector("#memo");
   cont.memos.value = input.value;
   let check = 0;
-  for (let j = 0; conts.length; j++) {
+
+  for (let j = 0; j < conts.length; j++) {
     if (conts[j].id === selected) {
       conts[j] = cont;
       check = 1;
