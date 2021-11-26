@@ -66,6 +66,7 @@ window.addEventListener("load", () => {
     //});
 
     conts = JSON.parse(localStorage.getItem("memo")); //메모에 넣은 conts가져오기
+
     conts.forEach((p) => {
       //가져온 conts 돌면서 id가 selected와 같은 요소 찾고, 반환
       if (p.id === selected) {
