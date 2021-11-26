@@ -1,3 +1,18 @@
+function show() {
+  document.querySelector(".background").className = "background show";
+}
+
+function close() {
+  document.querySelector(".background").className = "background";
+}
+
+document.querySelector("#abtn").addEventListener('click', show);
+document.querySelector("#close").addEventListener('click', close);
+
+function movetomainpage(){
+  location.href = "index.html";
+}
+
 let conts = [];
 let rewards = [];
 let days = [];
