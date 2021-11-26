@@ -66,13 +66,18 @@ window.addEventListener("load", () => {
         setHead.innerText = contentChild.innerText;
         //setHeading(stored_arr[k]);
         conts = JSON.parse(localStorage.getItem("memo"));
+        let loadCheck = 0;
         conts.forEach((p) => {
           //가져온 conts 돌면서 id가 selected와 같은 요소 찾고, 반환
           if (p.id === selected) {
             cont = p;
             setEmo(cont);
+            loadCheck = 1;
           }
         });
+        if (loadCheck === 0) {
+          setIniEmo();
+        }
         setDay(days);
       });
       document.getElementById("temp").appendChild(contentChild);
@@ -101,6 +106,13 @@ function setEmo(cont) {
   for (let k = 1; k < 8; k++) {
     setEmoIn = document.getElementById("d_" + `${k}`);
     setEmoIn.innerHTML = cont.memos.emo["e" + `${k}`];
+  }
+}
+
+function setIniEmo() {
+  for (let k = 1; k < 8; k++) {
+    setEmoIn = document.getElementById("d_" + `${k}`);
+    setEmoIn.innerHTML = " ";
   }
 }
 
