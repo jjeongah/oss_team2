@@ -61,7 +61,7 @@ rewardSubmit.addEventListener("click", () => {
   let inputR = document.querySelector("#rewardContent");
   cont.memos.reward = inputR.value;
   let check = 0;
-  for (let j = 0; conts.length; j++) {
+  for (let j = 0; j < conts.length; j++) {
     if (conts[j].id === selected) {
       conts[j] = cont;
       check = 1;
@@ -96,8 +96,15 @@ function setReDay(days) {
     if (ke === selected) {
       let stFillDay = new Date(val["year"], val["month"], val["date"]);
       stFillDay.setDate(stFillDay.getDate());
-      document.getElementById("dayday").innerHTML =
-        today.getDate() - stFillDay.getDate();
+
+      if (stFillDay.getDate() + 7 - today.getDate() <= 0) {
+        document.getElementById("dayday").innerHTML =
+          stFillDay.getDate() - stFillDay.getDate();
+      } else {
+        document.getElementById("dayday").innerHTML =
+          stFillDay.getDate() + 7 - today.getDate();
+      }
+
       document.getElementById("day_1").innerHTML = stFillDay.getDate();
       for (let i = 2; i < 8; i++) {
         stFillDay.setDate(stFillDay.getDate() + 1);
