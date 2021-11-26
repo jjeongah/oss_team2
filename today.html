@@ -17,6 +17,18 @@
     <link rel="stylesheet" href="style3.css" />
   </head>
   <body>
+    <div class="background">
+          <div class="window">
+            <div class="popup">
+              <button id="close" class="btn btn-light">X</button>
+                <Center><h2 class="success" style="margin-bottom: 50px;">
+                  <br><br>성공적으로 습관이 등록되었습니다!
+                </h2>
+                <button class="btn btn-primary" type="button" name="button" onclick="movetomainpage()"><h2>메인 페이지로 돌아가기</h2></button>
+            </div><!--popup!-->
+          </div>
+        </div>
+
     <div class="container m-1 d-flex border align-items-md-stretch flex-fill">
         <div class="container1 flex-grow-1 w-50 my-2 mx-1 border">
           <div class="headBar border">
@@ -65,7 +77,7 @@
           <div class="form-group mb-2 p-2">
               <label for="memo">메모 남기기</label>
               <textarea class="form-control" id="memo" rows="8"></textarea>
-              <p id="submitT"><button type="button" class="btn btn-primary btn-lg mt-1">입력하기</button></p>
+              <p id="submitT"><button type="button" id="enterbtn" class="btn btn-primary btn-lg mt-1">입력하기</button></p>
           </div>
         </div>
     </div>
