@@ -6,10 +6,10 @@ function close() {
   document.querySelector(".background").className = "background";
 }
 
-document.querySelector("#abtn").addEventListener('click', show);
-document.querySelector("#close").addEventListener('click', close);
+document.querySelector("#abtn").addEventListener("click", show);
+document.querySelector("#close").addEventListener("click", close);
 
-function movetomainpage(){
+function movetomainpage() {
   location.href = "index.html";
 }
 
@@ -47,23 +47,28 @@ let cont = {
 
 window.addEventListener("load", () => {
   selected = localStorage.getItem("selected");
-  let ss = JSON.parse(selected);
-  days = JSON.parse(localStorage.getItem("start_date"));
-  setReDay(days);
+  if (isEmpty(selected) === true) {
+    let setHead = document.getElementById("heading");
+    setHead.innerText = "습관을 선택해주세요";
+  } else {
+    let ss = JSON.parse(selected);
+    days = JSON.parse(localStorage.getItem("start_date"));
+    setReDay(days);
 
-  stored_arr = JSON.parse(localStorage.getItem("arr"));
-  let setHead = document.getElementById("heading");
-  setHead.innerText = stored_arr[ss];
+    stored_arr = JSON.parse(localStorage.getItem("arr"));
+    let setHead = document.getElementById("heading");
+    setHead.innerText = stored_arr[ss];
 
-  conts = JSON.parse(localStorage.getItem("memo")); //메모에 넣은 conts가져오기
-  conts.forEach((p) => {
-    //가져온 conts 돌면서 id가 selected와 같은 요소 찾고, 반환
-    if (p.id === selected) {
-      cont = p;
-      setEmo(cont);
-      setReText(cont);
-    }
-  });
+    conts = JSON.parse(localStorage.getItem("memo")); //메모에 넣은 conts가져오기
+    conts.forEach((p) => {
+      //가져온 conts 돌면서 id가 selected와 같은 요소 찾고, 반환
+      if (p.id === selected) {
+        cont = p;
+        setEmo(cont);
+        setReText(cont);
+      }
+    });
+  }
 });
 
 function movetomanagepage() {
@@ -128,4 +133,10 @@ function setReDay(days) {
       }
     }
   }
+}
+
+function isEmpty(selected) {
+  if (typeof selected === "undefined" || selected === null || selected === "")
+    return true;
+  else return false;
 }
