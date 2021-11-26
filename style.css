@@ -16,6 +16,9 @@ body {
     color: black;
   }
 
+#reset{
+  width: 120px;
+}
 .today::before {
 position: absolute;
 top: 50%;

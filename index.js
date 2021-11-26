@@ -1,3 +1,6 @@
+function reset(){
+  localStorage.clear();
+}
 /*for calendar in main.html */
 let date = new Date();
 const renderCalendar = () => {
