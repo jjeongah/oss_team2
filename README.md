@@ -42,7 +42,7 @@
 5. 구현한 기능을 디벨롭하고 사용자 환경에 따른 작동 여부를 확인한다. (완료)
 
 6. Electron 패키징 오류를 해결하고 기능 작동여부를 확인한다. (완료)
-html에서 require함수를 사용할 수 없음. import로 바꾸더라도 CORS ERROR가 발생함.(해결 X)
+   html에서 require함수를 사용할 수 없음. import로 바꾸더라도 CORS ERROR가 발생함.(해결 X)
 
 ## 3. Future
 
