@@ -9,23 +9,23 @@
 ## Example
 
 - 메인 페이지
-- <img src="https://user-images.githubusercontent.com/65378914/143680765-a7df1c54-2f4e-47da-9d95-e53f7ec7b6c3.png"  width="80%"/>
+<img src="https://user-images.githubusercontent.com/65378914/143680765-a7df1c54-2f4e-47da-9d95-e53f7ec7b6c3.png"  width="80%"/>
 
 
 - 추가하기 페이지
-![KakaoTalk_20211127_193712933_01](https://user-images.githubusercontent.com/65378914/143680767-c7216ca7-04cf-4d0d-b4ad-bc98887c0a5b.png)
+<img src="https://user-images.githubusercontent.com/65378914/143680767-c7216ca7-04cf-4d0d-b4ad-bc98887c0a5b.png"  width="80%"/>
 
 
 - 세부 내용 및 기간 선택 페이지
-![KakaoTalk_20211127_193712933_02](https://user-images.githubusercontent.com/65378914/143680768-789b9655-f624-4e15-b703-98f27f2df5b7.png)
+<img src="https://user-images.githubusercontent.com/65378914/143680768-789b9655-f624-4e15-b703-98f27f2df5b7.png"  width="80%"/>
 
 
 - 오늘 기록 페이지
-![KakaoTalk_20211127_193712933_04](https://user-images.githubusercontent.com/65378914/143680762-36f5f5ac-9c7f-4120-9fa7-329103ba8d82.png)
+<img src="https://user-images.githubusercontent.com/65378914/143680762-36f5f5ac-9c7f-4120-9fa7-329103ba8d82.png"  width="80%"/>
 
 
 - 보상추가 페이지
-![KakaoTalk_20211127_193712933_05](https://user-images.githubusercontent.com/65378914/143680763-1d16b7bf-a448-4e0f-b83e-1161d3b4bb70.png)
+<img src="https://user-images.githubusercontent.com/65378914/143680763-1d16b7bf-a448-4e0f-b83e-1161d3b4bb70.png"  width="80%"/>
 
 
 ## Installation
