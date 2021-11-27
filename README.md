@@ -8,7 +8,7 @@
 
 ## Installation
 
-- [GitHub Repo](https://github.com/jjeongah/oss_team2)에서 SPKU-win32-x64.zip 파일을 다운받으세요
+- [Google Drive](https://drive.google.com/drive/folders/1Yc0Xlax4ZLvYqrUuUYk09GBWzjokGCL3?usp=sharing)에서 SPKU-win32-x64.zip 파일을 다운받으세요
 - zip 파일의 압축을 해제하세요
 - oss_team2-main.exe 파일을 실행하세요
 
