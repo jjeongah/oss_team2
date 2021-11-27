@@ -20,9 +20,9 @@
 <img src="https://user-images.githubusercontent.com/65378914/143680768-789b9655-f624-4e15-b703-98f27f2df5b7.png"  width="80%"/>
 
 
-- 관리하기 페이지
+- 관리하기 페이지 (아래 사진은 습관을 등록하지 않았을 때의 화면입니다. 습관을 추가할 경우, 목록에 추가됩니다)
 <img src="https://user-images.githubusercontent.com/65378914/143681090-8566b83c-2ca0-49d9-88e9-c67b0a49a575.png"  width="80%" height="30%"/>
-   습관을 추가할 경우 목록에 추가됩니다.
+
 
 - 오늘 기록 페이지
 <img src="https://user-images.githubusercontent.com/65378914/143680762-36f5f5ac-9c7f-4120-9fa7-329103ba8d82.png"  width="80%"/>
