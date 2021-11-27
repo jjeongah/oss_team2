@@ -6,9 +6,6 @@
 
 ## Example
 
-<img width="810" alt="no_img" src="">
-
-![Final_Project](https://user-images.githubusercontent.com/80454079/119444378-19acc900-bd66-11eb-8b32-75a294048f46.gif)
 
 ## Installation
 
