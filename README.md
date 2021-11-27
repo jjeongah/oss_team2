@@ -21,7 +21,7 @@
 
 
 - 관리하기 페이지
-<img src="https://user-images.githubusercontent.com/65378914/143681090-8566b83c-2ca0-49d9-88e9-c67b0a49a575.png"  width="80%" height="60%"/>
+<img src="https://user-images.githubusercontent.com/65378914/143681090-8566b83c-2ca0-49d9-88e9-c67b0a49a575.png"  width="80%" height="30%"/>
 
 
 - 오늘 기록 페이지
