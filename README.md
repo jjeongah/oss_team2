@@ -40,8 +40,9 @@
 - 세부 내용 및 기간 선택 페이지
 <img src="https://user-images.githubusercontent.com/65378914/143680768-789b9655-f624-4e15-b703-98f27f2df5b7.png"  width="80%"/>
 
--빈칸 입력시 아래와 같이 경고창이 뜹니다.
-<img src="https://user-images.githubusercontent.com/65378914/143682297-830cb8fe-b9e0-43a4-90fb-a114dc958da6.png"  width="40%"/>
+
+-빈칸 입력시 아래와 같이 경고창이 뜹니다.  
+<img src="https://user-images.githubusercontent.com/65378914/143682297-830cb8fe-b9e0-43a4-90fb-a114dc958da6.png"  width="40%"/>  
 
 
 
