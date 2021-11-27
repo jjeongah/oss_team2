@@ -9,7 +9,7 @@
 ## Example
 
 - 메인 페이지
-![KakaoTalk_20211127_193712933](https://user-images.githubusercontent.com/65378914/143680765-a7df1c54-2f4e-47da-9d95-e53f7ec7b6c3.png)
+- <img src="https://user-images.githubusercontent.com/65378914/143680765-a7df1c54-2f4e-47da-9d95-e53f7ec7b6c3.png"  width="400" height="300"/>
 
 
 - 추가하기 페이지
