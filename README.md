@@ -55,7 +55,7 @@
 ## 2. History
 
 1. 필요한 기능을 정리하고 이에 따른 페이지 구성을 디자인한다.(완료)
-<img src="https://user-images.githubusercontent.com/65378914/143661947-cc5a4844-e344-4909-8f15-1972ebeff856.jpg"  width="400" height="300"/>
+<img src="https://user-images.githubusercontent.com/65378914/143661947-cc5a4844-e344-4909-8f15-1972ebeff856.jpg"  width="80%"/>
 
 2. 페이지별로 파트를 나누고 각자 맡은 페이지의 HTML 문서 틀을 작성하고 CSS 파일을 제작한다.(완료)
 
