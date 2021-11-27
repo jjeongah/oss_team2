@@ -9,7 +9,7 @@
 ## Example
 
 - 메인 페이지
-- <img src="https://user-images.githubusercontent.com/65378914/143680765-a7df1c54-2f4e-47da-9d95-e53f7ec7b6c3.png"  width="400" height="300"/>
+- <img src="https://user-images.githubusercontent.com/65378914/143680765-a7df1c54-2f4e-47da-9d95-e53f7ec7b6c3.png"  width="500" height="400"/>
 
 
 - 추가하기 페이지
