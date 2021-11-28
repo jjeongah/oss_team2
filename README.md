@@ -27,6 +27,10 @@
 7. 오늘 기록 추가하기에서 기분 스티커를 눌러 오늘 습관을 실행한 기분을 추가해보세요
 
 
+## Demo video
+https://youtu.be/Y8VCLRIjcf4
+
+
 ## Example
 
 - 메인 페이지
@@ -57,10 +61,6 @@
 
 - 보상추가 페이지
 <img src="https://user-images.githubusercontent.com/65378914/143680763-1d16b7bf-a448-4e0f-b83e-1161d3b4bb70.png"  width="80%"/>
-
-
-- Demo video 
-[Youtube]https://youtu.be/Y8VCLRIjcf4(Click it!)
 
 
 ## 1. Releases
