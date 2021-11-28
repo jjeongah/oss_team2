@@ -59,6 +59,10 @@
 <img src="https://user-images.githubusercontent.com/65378914/143680763-1d16b7bf-a448-4e0f-b83e-1161d3b4bb70.png"  width="80%"/>
 
 
+- Demo video 
+[Youtube]https://youtu.be/Y8VCLRIjcf4(Click it!)
+
+
 ## 1. Releases
 
 -   v.1.0.0 - 습관 추가 및 관리 기능 추가
